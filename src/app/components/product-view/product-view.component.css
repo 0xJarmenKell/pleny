@@ -1,0 +1,64 @@
+.frist-col {
+  border: 1px solid red;
+  border-radius: 20px;
+} 
+
+.space-right2 {
+  padding-left: 45px;
+}
+
+.btns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.page-item {
+  margin: 0 10px;
+}
+
+.page-link {
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.page-link:hover {
+  background-color: #f0f0f0;
+}
+
+.page-link.active {
+  background-color: #337ab7;
+  color: #fff;
+}
+
+.dashed-text {
+  text-decoration: line-through;
+  text-decoration-style: solid;
+  text-decoration-color: black; 
+}
+
+.discount-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background-color: rgb(68, 216, 135); 
+  color: #fff; 
+  padding: 8px 12px;
+  border-radius: 20%;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  /* transform: rotate(-15deg);  */
+}
+
+.card-body .rippon {
+  position: relative;
+
+}

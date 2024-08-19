@@ -1,0 +1,16 @@
+.bi.bi-facebook:hover {
+    color: blue;
+    transition: all 0.5s;
+}
+
+.bi.bi-twitter:hover {
+    color: rgb(25, 185, 248);
+    transition: all 0.5s;
+}
+.bi.bi-instagram:hover {
+    background: linear-gradient(rgb(255, 0, 170), rgb(89, 0, 253));
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.5s;
+}

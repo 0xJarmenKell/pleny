@@ -1,0 +1,63 @@
+
+.form-box {
+
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 400px;
+
+}
+
+.search-box {
+    width: 100%;
+    padding: 10px 10px 10px 35px; /* Padding for icon space */
+    font-size: 16px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    text-align: right;
+}
+
+
+.search-item {
+    position: absolute;
+    top: 48%;
+    left: 10px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+}
+
+
+@media (max-width: 768px) {
+    .form-box {
+        max-width: 250px;
+    }
+
+    .search-box {
+        font-size: 14px;
+        padding: 8px 8px 8px 30px;
+    }
+
+    .search-item {
+        width: 18px;
+        height: 18px;
+        left: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-box {
+        max-width: 180px;
+    }
+
+    .search-box {
+        padding: 6px 6px 6px 28px;
+        font-size: 12px;
+    }
+
+    .search-item {
+        width: 16px;
+        height: 16px;
+        left: 6px;
+    }
+}

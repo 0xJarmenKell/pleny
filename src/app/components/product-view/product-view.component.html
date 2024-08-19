@@ -1,0 +1,68 @@
+<app-header></app-header>
+<!-- <div class="container-fluid pt-5">
+  <div class="row justify-content-center">
+      <div class="col-md-3">
+           <h3>Products</h3>
+           asdasdsa
+           asdasdsd
+        </div>
+          <div class="col-md-3 mt-2" *ngFor="let product of data?.products">
+            <div class="card" style="width: 18rem;">
+                <img routerLink="/product-details" src="{{product.thumbnail}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{product.title}}</h5>
+                  <p class="card-text">{{product.description}}</p>
+                  <div class="d-flex">
+                  <p>{{product.price}} USD</p>
+                  <p class="space-right2">{{product.price}} USD</p>
+                   </div>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+          </div>
+    </div>
+</div> -->
+<!-- Grid container -->
+<div class="container-fluid">
+  <div class="row">
+    <!-- Sidebar with categories -->
+    <div class="col-lg-3 col-md-3 col-sm-12">
+      <h2>Products</h2>
+      <mat-chip-listbox class="mat-mdc-chip-set-stacked" aria-label="Color selection">
+        @for (chip of availableColors; track chip) {
+          <mat-chip-option selected [color]="chip.color">{{chip.name}}</mat-chip-option>
+        }
+      </mat-chip-listbox>
+    </div>
+    <!-- Main content with products and pagination -->
+    <div class="col-md-9">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-12  mt-2" *ngFor="let product of data?.products">
+          <div class="card">
+            <div class="card-body rippon">
+              <div class="discount-badge">{{product?.discountPercentage}}%</div>
+            <a routerLink="/product-details/{{product?.id}}"><img [src]="product?.thumbnail" alt="Product image"></a>
+            <h5>{{ product?.title }}</h5>
+            <p>{{ product?.description }}</p>
+            <div class="d-flex">
+              <p class="dashed-text">549 $ USD</p>
+              <p class="space-right2">{{product?.price}} $ USD</p>
+               </div>
+            <div class="btns">
+            <button class="btn btn-success" (click)="addToCart(data)" *ngIf="showAdd">Add to Cart</button>
+            <!-- <button class="btn btn-danger" (click)="removeItem(data)" *ngIf="showRemove">Remove Item</button> -->
+            <button routerLink="/product-details/{{product.id}}" class="btn btn-primary">Details</button>
+            <!-- <button (click)="addToCart(product)" *ngIf="showAdd" class="btn btn-primary">Add to Cart</button>&nbsp; -->
+          </div>
+          </div>
+          </div>
+        </div>
+      </div>
+      <!-- Pagination -->
+       <app-pagination [total]="100" [limit]="20" [currentPage]="currentPage" (pageChange)="onPageChange($event)">
+       </app-pagination>
+
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>
